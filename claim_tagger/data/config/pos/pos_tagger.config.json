@@ -1,0 +1,36 @@
+{
+    "id": "0000",
+    "model": {
+        "MAX_SENT_LEN": 400,
+        "MAX_MORPHEMES": 4,
+        "ENC_SIZE_TOKEN": 45,
+        "ENC_CHAR_SIZE_CTX_WIN": 1,
+        "ENC_SIZE_CTX_WIN": 5,
+        "HIDDEN_DIM_MORPH": [50, 200],
+        "HIDDEN_DIM_DEC": [300, 800],
+        "HIDDEN_DIM_ATTR": [20, 200],
+        "INIT_DIST": "uniform",
+        "POS_CLASSES": [
+          "noun", "proper noun", "adjective", "pronoun", "adverb", "verb", "conjunction", "determiner", "preposition",
+          "numeral", "number", "interjection", "article", "symbol", "punctuation mark", "particle", "x", ":start:", ":end:"
+        ],
+        "POS_MAP": {
+          "ADJ": "adjective", "ADP": "preposition", "ADV": "adverb", "AUX": "verb", "CCONJ": "conjunction",
+          "DET": "determiner|article", "INTJ": "interjection", "NOUN": "noun", "NUM": "numeral|number",
+          "PART": "particle", "PRON": "pronoun", "PROPN": "proper noun", "PUNCT": "punctuation mark",
+          "SCONJ": "conjunction", "SYM": "symbol", "VERB": "verb", "X": "x|:start:|:end:"
+        }
+    },
+
+    "data": {
+        "config_path": "/home/danilo/claim_segmentation/tdv_postagger/tdv_postagger/data/config/",
+        "model_path": "/home/danilo/claim_segmentation/tdv_postagger/tdv_postagger/data/pos_models/pos_model_[%s]-%d.hdf5",
+        "posdb_path": "/home/danilo/claim_segmentation/tdv_postagger/tdv_postagger/data/posdb_en.json",
+        "ud_train_path": "/home/danilo/claim_segmentation/tdv_postagger/tdv_postagger/data/UD_English/en-ud-train.conllu",
+        "ud_test_path": "/home/danilo/claim_segmentation/tdv_postagger/tdv_postagger/data/UD_English/en-ud-dev.conllu"
+    },
+
+    "hyperparam": {
+        "confidence_thresh": 0.6
+    }
+}

@@ -1,0 +1,25 @@
+{
+    "id": "0007",
+    "model": {
+        "ENC_SIZE_WORD": 40,
+        "ENC_SIZE_WORD_OUT": 68,
+        "ENC_SIZE_CTX_WIN": 3,
+        "REVERSE": false,
+        "HIDDEN_DIM_ENC_1": 400,
+        "HIDDEN_DIM_ENC_2": 100,
+        "HIDDEN_DIM_DEC_1": 300,
+        "HIDDEN_DIM_DEC_2": 1000,
+        "INIT_DIST": "truncated_normal"
+    },
+
+    "data": {
+        "morphodb_path": "/home/danilo/claim_segmentation/wikt_morphodecomp/wikt_morphodecomp/data/enmorphodb_plurals.json",
+        "vocab_path": "/home/danilo/claim_segmentation/wikt_morphodecomp/wikt_morphodecomp/data/wikt_vocab.json",
+        "test_vocab": ["unlockability", "busheater", "drivethru"],
+        "model_path": "/home/danilo/claim_segmentation/models/w2m/w2m_model_[%s]-%d.hdf5"
+    },
+
+    "hyperparam": {
+        "confidence_thresh": 0.8
+    }
+}

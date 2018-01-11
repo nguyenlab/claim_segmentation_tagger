@@ -1,0 +1,49 @@
+{
+    "id": "0000",
+    "model": {
+        "MAX_SENT_LEN": 250,
+        "MAX_SENT_LEN_TEST": 400,
+        "MAX_MORPHEMES": 4,
+        "ENC_SIZE_TOKEN": 45,
+        "ENC_CHAR_SIZE_CTX_WIN": 1,
+        "ENC_SIZE_CTX_WIN": 3,
+        "HIDDEN_DIM_MORPH": [50, 200],
+        "HIDDEN_DIM_DEC": [200, 800],
+        "INIT_DIST": "uniform",
+        "TDV_SIZE": 10,
+        "TDV_LINK_DIM": 15,
+        "W2V_DIM": 200,
+        "DEPTH_OUTPUT": 3,
+        "ANNOTATIONS": ["MORPHO", "W2V", "TDV"],
+        "POS_CLASSES": [
+          "noun", "proper noun", "adjective", "pronoun", "adverb", "verb", "conjunction", "determiner", "preposition",
+          "numeral", "number", "interjection", "article", "symbol", "punctuation mark", "particle", "x", ":start:", ":end:"
+        ],
+        "POS_MAP": {
+          "ADJ": "adjective", "ADP": "preposition", "ADV": "adverb", "AUX": "verb", "CCONJ": "conjunction",
+          "DET": "article|determiner", "INTJ": "interjection", "NOUN": "noun", "NUM": "symbol|numeral|number",
+          "PART": "particle", "PRON": "pronoun", "PROPN": "proper noun", "PUNCT": "punctuation mark",
+          "SCONJ": "conjunction", "SYM": "symbol", "VERB": "verb", "X": "x|:start:|:end:"
+        },
+        "STANFORD_POS_MAP": {
+          "JJ(R|S)?": "adjective", "IN|TO": "preposition", "W?RB.": "adverb", "CC": "conjunction",
+          "W?DT": "article|determiner", "UH": "interjection", "NNS?": "noun", "LS|CD": "numeral|number",
+          "SYM": "symbol", "RP": "particle", "PR.+|WP.": "pronoun", "NNPS?": "proper noun",
+          ".|,|:|;|-LRB-|-RRB-": "punctuation mark", "VB.": "verb", "X": "x|:start:|:end:"
+        },
+        "CLASSES": ["CLAIM_NUM", "CLAIM_REF", "CLAIM_REF_NUM", "FIGURE_REF", "INVENTION", "_", ":end:",
+                    "REQT[1]", "REQT[2]", "REQT[3]", "REQT[4]", "REQT[5]", "REQT[6]", "REQT[7]", "REQT[8]"]
+    },
+
+    "data": {
+        "config_path": "./data/config/",
+        "model_path": "./data/claim_models/claim_model_[%s]-%d.hdf5",
+        "posdb_path": "./data/posdb_en.json",
+        "stanford_corenlp": {"host": "localhost", "port": 9000},
+        "semantic_db": {"host": "localhost", "port": 27217}
+    },
+
+    "options": {
+      "tagger": "tdv"
+    }
+}
